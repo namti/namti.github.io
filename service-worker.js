@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/namti.github.io/precache-manifest.ebb7d0a43fc8e71122e9f7b06ccbd1f3.js"
+  "namti.github.io/precache-manifest.0dc7742cea40a16af08201b32bc58ff4.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/namti.github.io/index.html", {
+workbox.routing.registerNavigationRoute("namti.github.io/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
