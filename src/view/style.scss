@@ -1,3 +1,26 @@
 html, body{
-	background-color: red;
+}
+
+.fade-enter{
+	transition: opacity ease-in-out 300ms;
+
+	&.fade-enter-active{
+		opacity: 1;
+	}
+
+	&.fade-enter-done{
+		opacity: 0;
+	}
+}
+
+.fade-exit{
+	transition: opacity ease-in-out 300ms;
+
+	&.fade-exit-active{
+		opacity: 0;
+	}
+
+	&.fade-exit-done{
+		opacity: 1;
+	}
 }

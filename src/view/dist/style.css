@@ -1,1 +1,1 @@
-html,body{background-color:red}/*# sourceMappingURL=style.css.map */
+.fade-enter{transition:opacity ease-in-out 300ms}.fade-enter.fade-enter-active{opacity:1}.fade-enter.fade-enter-done{opacity:0}.fade-exit{transition:opacity ease-in-out 300ms}.fade-exit.fade-exit-active{opacity:0}.fade-exit.fade-exit-done{opacity:1}/*# sourceMappingURL=style.css.map */
