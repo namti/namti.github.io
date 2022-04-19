@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 30" xml:space="preserve" class="logo-svg">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#2B2B2B;stroke-width:1.5;}
+</style>
+<path id="n" class="logo-shape" d="M15.5,0.7L9.2,13.2V0.7H0.8v28.5h8.8l6.2-12.4v12.4h8.5V0.7H15.5z"/>
+<path id="a" class="logo-shape" d="M30,1.7l13.8,27.6h-8.3L30,18.3l-5.5,10.9h-8.3L30,1.7z"/>
+<path id="m" class="logo-shape" d="M44.5,0.7L50,11.7l5.5-10.9h8.8v28.5h-8.5V16.8L50,28.3l-5.8-11.5v12.4h-8.5V0.7H44.5z"/>
+<path id="t" class="logo-shape" d="M89,0.7v8.5H79v20h-8.5v-20h-10V0.7H89z"/>
+<path id="i" class="logo-shape" d="M94,0.7v28.5h-8.5V0.7H94z"/>
+</svg>
