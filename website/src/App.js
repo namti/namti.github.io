@@ -5,6 +5,7 @@ import {
 	Col,
 } from 'reactstrap';
 import { Counter } from './features/counter/Counter';
+import { Works } from './features/work/works';
 import './view/dist/style.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 				<Col>
 					<header>
 						<Counter />
+						<Works />
 					</header>
 				</Col>
 			</Row>
