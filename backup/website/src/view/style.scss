@@ -1,0 +1,34 @@
+@import "bootstrap@5.1.x/bootstrap.scss";
+
+.debug{
+	&, *{
+		outline: 1px solid rgba(255,0,255,.2);
+	}
+}
+
+html, body{
+}
+
+.logo-wrapper{
+
+}
+
+.logo{
+	width: 25%;
+
+	path{
+		fill: $white;
+		stroke: $danger;
+	}
+
+	.n{
+	}
+	.a{
+	}
+	.m{
+	}
+	.t{
+	}
+	.i{
+	}
+}
