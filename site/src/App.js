@@ -1,10 +1,12 @@
+import React from 'react';
 import {
 	Container,
 	Row,
 	Col,
 } from 'reactstrap';
+import ZdogExample from './zdog-example';
+import IconBicycle from './3d_icons/bicycle';
 
-import logo from './logo.svg';
 import './view/dist/style.css';
 
 function App() {
@@ -13,20 +15,7 @@ function App() {
 			<Row>
 				<Col>
 
-					<header className="App-header">
-						<img src={logo} className="App-logo" alt="logo" />
-						<p>
-							Edit <code>src/App.js</code> and save to reload.
-						</p>
-						<a
-							className="App-link"
-							href="https://reactjs.org"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Learn React
-						</a>
-					</header>
+				<IconBicycle />
 
 				</Col>
 			</Row>
