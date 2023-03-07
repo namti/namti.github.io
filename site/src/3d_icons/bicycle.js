@@ -1,37 +1,57 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { 
 	Anchor,
 	Illustration, 
 	Ellipse, 
 	Shape, 
-	RoundedRect, 
-	useRender,nn
+	Rect,
 } from 'react-zdog';
+import Zdog from 'zdog';
 
 const IconBicycle = (props) => {
+	const TAU = Zdog.TAU;
+	const guidelineSize = 128000;
 
 	return (
 		<div style={ { width: props.width, height: props.height } } className={ props.className }>
-			<Illustration zoom={ 1 } dragRotate translate={ { y: 88 } }>
-				<Anchor>
+			<Illustration zoom={ 1 } dragRotate>
+				<Anchor translate={ { y: 88 } }>
 					{
-						props.showGuidline &&
+						props.showGuideline &&
 							<Anchor>
-								{/* guideline */}
+								{/* guideline x */}
 								<Shape
-									color="#f0f"
+									color="#00f"
 									path={ [
-										{ x: -128 },
-											{ x:  128 },
+										{ x: -guidelineSize },
+											{ x:  guidelineSize },
 									] }
 								/>
-								{/* guideline */}
+								{/* guideline y */}
 								<Shape
-									color="#f0f"
+									color="#0f0"
 									path={ [
-										{ y: -128 },
-											{ y:  128 },
+										{ y: -guidelineSize },
+											{ y:  guidelineSize },
 									] }
+								/>
+								{/* guideline z */}
+								<Shape
+									color="#f00"
+									path={ [
+										{ z: -guidelineSize },
+											{ z:  guidelineSize },
+									] }
+								/>
+								{/* ground */}
+								<Rect 
+									color="#fff0"
+									backface="rgba(0,0,0,.35)"
+									fill
+									width={ guidelineSize }
+									height={ guidelineSize }
+									rotate={ { x: TAU / 4 } }
 								/>
 							</Anchor>
 					}
@@ -125,7 +145,7 @@ const IconBicycle = (props) => {
 						stroke={ props.stroke }
 						path={ [
 							{ x: -22, y: -72 },
-								{ x: 72, y: -80 },
+								{ x: 70, y: -80 },
 						] }
 						closed={ false }
 					/>
@@ -172,8 +192,17 @@ export default IconBicycle;
 IconBicycle.defaultProps = {
 	strokeColor: "#373737",
 	stroke: 6,
-	width: 512,
-	height: 512,
-	className: 'bg-info',
-	showGuidline: false,
+	width: 256,
+	height: 256,
+	className: '',
+	showGuideline: false,
+};
+
+IconBicycle.propTypes = {
+	strokeColor: PropTypes.string,
+	stroke: PropTypes.number,
+	width: PropTypes.number,
+	height: PropTypes.number,
+	className: PropTypes.string,
+	showGuideline: PropTypes.bool,
 };

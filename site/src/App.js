@@ -4,18 +4,22 @@ import {
 	Row,
 	Col,
 } from 'reactstrap';
-import ZdogExample from './zdog-example';
-import IconBicycle from './3d_icons/bicycle';
+
+import {
+	IconBicycle,
+	IconGame,
+} from './3d_icons';
 
 import './view/dist/style.css';
 
 function App() {
 	return (
-		<Container>
+		<Container className="my-5">
 			<Row>
-				<Col>
+				<Col className="d-flex align-items-baseline">
 
-				<IconBicycle />
+				<IconBicycle className="border rounded-5 overflow-hidden m-2" />
+				<IconGame className="border rounded-5 overflow-hidden m-2" />
 
 				</Col>
 			</Row>
