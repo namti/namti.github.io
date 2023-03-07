@@ -18,8 +18,8 @@ function App() {
 			<Row>
 				<Col className="d-flex align-items-baseline">
 
-				<IconBicycle dragRotate zoom={ .75 } className="border rounded-5 shadow overflow-hidden m-4" />
-				<IconGame dragRotate zoom={ .75 } className="border rounded-5 shadow overflow-hidden m-4" />
+				<IconBicycle dragRotate zoom={ .75 } className="m-3" />
+				<IconGame dragRotate zoom={ .75 } className="m-3" />
 
 				</Col>
 			</Row>
