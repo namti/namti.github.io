@@ -110,17 +110,17 @@ const IconBicycle = (props) => {
 							translate={ { z: 8 } }
 						/>
 
-						{/* pedal */}
+						{/* crank */}
 						<Shape 
 							color={ props.strokeColor }
 							stroke={ props.stroke }
 							path={ [
-								{ y: -32, z: 24 },
-									{ y: -32, z: 12 },
+								{ y: -36, z: 24 },
+									{ y: -36, z: 12 },
 									{ y: 0, z: 12 },
 									{ y: 0, z: -12 },
-									{ y: 32, z: -12 },
-									{ y: 32, z: -24 },
+									{ y: 36, z: -12 },
+									{ y: 36, z: -24 },
 							] }
 							closed={ false } 
 						/>
