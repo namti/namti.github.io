@@ -156,12 +156,12 @@ const IconBicycle = (props) => {
 						stroke={ props.stroke }
 						path={ [
 							{ x: -16, y: -48 },
-								{ x: -44, y: -144 },
+								{ x: -44, y: -148 },
 								{ x: -24, y: -156 },
-								{ x: -64, y: -156, z: 8 },
+								{ x: -56, y: -158, z: 12 },
 								{ x: -24, y: -156 },
-								{ x: -64, y: -156, z: -8 },
-								{ x: -64, y: -156, z: 8 },
+								{ x: -56, y: -158, z: -12 },
+								{ x: -56, y: -158, z: 12 },
 						] }
 						closed={ false }
 					/>
@@ -191,7 +191,7 @@ export default IconBicycle;
 
 IconBicycle.defaultProps = {
 	strokeColor: "#373737",
-	stroke: 6,
+	stroke: 8,
 	width: 256,
 	height: 256,
 	className: '',

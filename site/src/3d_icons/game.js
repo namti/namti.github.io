@@ -85,15 +85,16 @@ const IconGame = (props) => {
 							</Anchor>
 					}
 
-					<Anchor translate={ { x: 48, z: 32 } }>
-						<Ellipse diameter={ 24 } stroke={ props.stroke } color={ props.strokeColor } translate={ { x: -16, y: 16 } } />
-						<Ellipse diameter={ 24 } stroke={ props.stroke } color={ props.strokeColor } translate={ { x: 16, y: -16 } } />
+					<Anchor translate={ { x: 44, z: 32 } }>
+						<Ellipse diameter={ 24 } stroke={ props.stroke } color={ props.strokeColor } translate={ { x: -14, y: 14 } } />
+						<Ellipse diameter={ 24 } stroke={ props.stroke } color={ props.strokeColor } translate={ { x: 14, y: -14 } } />
 					</Anchor>
 
+					{/* cross button */}
 					<Shape
 						stroke={ props.stroke }
 						color={ props.strokeColor }
-						translate={ { z: 32, x: -48 } }
+						translate={ { z: 32, x: -44 } }
 						path={ [
 							{ x: 8, y: 8 },
 							{ x: 24, y: 8 },
@@ -146,6 +147,50 @@ const IconGame = (props) => {
 									} 
 							} }
 						/>
+
+						{/* strut top left */}
+						<Shape 
+							stroke={ props.stroke }
+							color={ props.strokeColor }
+							path={ [
+								{ x: -44, y: -52, z: 16 },
+								{ x: -44, y: -52, z: -16 },
+							] }
+							closed={ false }
+						/>
+
+						{/* strut top right */}
+						<Shape 
+							stroke={ props.stroke }
+							color={ props.strokeColor }
+							path={ [
+								{ x: 44, y: -52, z: 16 },
+								{ x: 44, y: -52, z: -16 },
+							] }
+							closed={ false }
+						/>
+
+						{/* strut bottom left */}
+						<Shape 
+							stroke={ props.stroke }
+							color={ props.strokeColor }
+							path={ [
+								{ x: -44, y: 52, z: 16 },
+								{ x: -44, y: 52, z: -16 },
+							] }
+							closed={ false }
+						/>
+
+						{/* strut top right */}
+						<Shape 
+							stroke={ props.stroke }
+							color={ props.strokeColor }
+							path={ [
+								{ x: 44, y: 52, z: 16 },
+								{ x: 44, y: 52, z: -16 },
+							] }
+							closed={ false }
+						/>
 					</Anchor>
 
 				</Anchor>
@@ -158,7 +203,7 @@ export default IconGame;
 
 IconGame.defaultProps = {
 	strokeColor: "#373737",
-	stroke: 6,
+	stroke: 8,
 	width: 256,
 	height: 256,
 	className: '',
