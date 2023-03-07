@@ -44,8 +44,8 @@ const IconGame = (props) => {
 
 	return (
 		<div style={ { width: props.width, height: props.height } } className={ props.className }>
-			<Illustration zoom={ 1 } dragRotate>
-				<Anchor translate={ { y: 24 } }>
+			<Illustration zoom={ props.zoom } dragRotate={ props.dragRotate }>
+				<Anchor translate={ { y: 16 } }>
 					{
 						props.showGuideline &&
 							<Anchor>
@@ -202,8 +202,10 @@ const IconGame = (props) => {
 export default IconGame;
 
 IconGame.defaultProps = {
+	dragRotate: false,
+	zoom: 1,
 	strokeColor: "#373737",
-	stroke: 8,
+	stroke: 5,
 	width: 256,
 	height: 256,
 	className: '',
@@ -211,6 +213,8 @@ IconGame.defaultProps = {
 };
 
 IconGame.propTypes = {
+	dragRotate: PropTypes.bool,
+	zoom: PropTypes.number,
 	strokeColor: PropTypes.string,
 	stroke: PropTypes.number,
 	width: PropTypes.number,

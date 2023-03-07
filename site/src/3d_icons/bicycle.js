@@ -15,8 +15,8 @@ const IconBicycle = (props) => {
 
 	return (
 		<div style={ { width: props.width, height: props.height } } className={ props.className }>
-			<Illustration zoom={ 1 } dragRotate>
-				<Anchor translate={ { y: 88 } }>
+			<Illustration zoom={ props.zoom } dragRotate={ props.dragRotate }>
+				<Anchor translate={ { y: 80 } }>
 					{
 						props.showGuideline &&
 							<Anchor>
@@ -190,8 +190,10 @@ const IconBicycle = (props) => {
 export default IconBicycle;
 
 IconBicycle.defaultProps = {
+	dragRotate: false,
+	zoom: 1,
 	strokeColor: "#373737",
-	stroke: 8,
+	stroke: 5,
 	width: 256,
 	height: 256,
 	className: '',
@@ -199,6 +201,8 @@ IconBicycle.defaultProps = {
 };
 
 IconBicycle.propTypes = {
+	dragRotate: PropTypes.bool,
+	zoom: PropTypes.number,
 	strokeColor: PropTypes.string,
 	stroke: PropTypes.number,
 	width: PropTypes.number,
