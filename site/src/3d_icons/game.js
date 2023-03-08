@@ -9,6 +9,11 @@ import {
 	RoundedRect,
 } from 'react-zdog';
 import Zdog from 'zdog';
+import CoordinateSpace from './coordinate-space';
+import { 
+	defaultStroke,
+	defaultStrokeColor,
+} from './constants';
 
 const ControllerCase = (props) => (
 	<RoundedRect
@@ -23,67 +28,14 @@ const ControllerCase = (props) => (
 	/>
 )
 
-const Button = (props) => (
-	<Ellipse
-		color={ props.strokeColor }
-		stroke={ props.stroke }
-		diameter={ 40 }
-
-		// { ...{
-		// 	diameter: 32,
-		// 	stroke: props.stroke,
-		// 	color: props.strokeColor, 
-		// 		...props.shapeProps || {},
-		// } }
-	/>
-)
-
 const IconGame = (props) => {
 	const TAU = Zdog.TAU;
-	const guidelineSize = 128000;
 
 	return (
 		<div style={ { width: props.width, height: props.height } } className={ props.className }>
 			<Illustration zoom={ props.zoom } dragRotate={ props.dragRotate }>
 				<Anchor translate={ { y: 16 } }>
-					{
-						props.showGuideline &&
-							<Anchor>
-								{/* guideline x */}
-								<Shape
-									color="#00f"
-									path={ [
-										{ x: -guidelineSize },
-											{ x:  guidelineSize },
-									] }
-								/>
-								{/* guideline y */}
-								<Shape
-									color="#0f0"
-									path={ [
-										{ y: -guidelineSize },
-											{ y:  guidelineSize },
-									] }
-								/>
-								{/* guideline z */}
-								<Shape
-									color="#f00"
-									path={ [
-										{ z: -guidelineSize },
-											{ z:  guidelineSize },
-									] }
-								/>
-								{/* ground */}
-								<Rect 
-									color="#fff0"
-									backface="rgba(0,0,0,.35)"
-									fill
-									width={ guidelineSize }
-									height={ guidelineSize }
-									rotate={ { x: TAU / 4 } }
-								/>
-							</Anchor>
-					}
+					<CoordinateSpace show={ props.showCoordinateSpace } size={ props.width > props.height ? props.width : props.height } />
 
 					<Anchor translate={ { x: 44, z: 32 } }>
 						<Ellipse diameter={ 24 } stroke={ props.stroke } color={ props.strokeColor } translate={ { x: -14, y: 14 } } />
@@ -204,12 +156,12 @@ export default IconGame;
 IconGame.defaultProps = {
 	dragRotate: false,
 	zoom: 1,
-	strokeColor: "#373737",
-	stroke: 5,
+	strokeColor: defaultStrokeColor,
+	stroke: defaultStroke,
 	width: 256,
 	height: 256,
 	className: '',
-	showGuideline: false,
+	showCoordinateSpace: false,
 };
 
 IconGame.propTypes = {
@@ -220,5 +172,5 @@ IconGame.propTypes = {
 	width: PropTypes.number,
 	height: PropTypes.number,
 	className: PropTypes.string,
-	showGuideline: PropTypes.bool,
+	showCoordinateSpace: PropTypes.bool,
 };

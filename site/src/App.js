@@ -8,6 +8,7 @@ import {
 import {
 	IconBicycle,
 	IconGame,
+	IconCamp,
 } from './3d_icons';
 
 import './view/dist/style.css';
@@ -18,8 +19,9 @@ function App() {
 			<Row>
 				<Col className="d-flex align-items-baseline">
 
-				<IconBicycle dragRotate zoom={ .75 } className="m-3" />
-				<IconGame dragRotate zoom={ .75 } className="m-3" />
+				<IconBicycle dragRotate zoom={ 1 } className="m-3" />
+				<IconGame dragRotate zoom={ 1 } className="m-3" />
+				<IconCamp dragRotate zoom={ 1 } className="m-3" _showCoordinateSpace />
 
 				</Col>
 			</Row>

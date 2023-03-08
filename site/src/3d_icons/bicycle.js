@@ -8,53 +8,20 @@ import {
 	Rect,
 } from 'react-zdog';
 import Zdog from 'zdog';
+import CoordinateSpace from './coordinate-space';
+import { 
+	defaultStroke,
+	defaultStrokeColor,
+} from './constants';
 
 const IconBicycle = (props) => {
 	const TAU = Zdog.TAU;
-	const guidelineSize = 128000;
 
 	return (
 		<div style={ { width: props.width, height: props.height } } className={ props.className }>
 			<Illustration zoom={ props.zoom } dragRotate={ props.dragRotate }>
 				<Anchor translate={ { y: 80 } }>
-					{
-						props.showGuideline &&
-							<Anchor>
-								{/* guideline x */}
-								<Shape
-									color="#00f"
-									path={ [
-										{ x: -guidelineSize },
-											{ x:  guidelineSize },
-									] }
-								/>
-								{/* guideline y */}
-								<Shape
-									color="#0f0"
-									path={ [
-										{ y: -guidelineSize },
-											{ y:  guidelineSize },
-									] }
-								/>
-								{/* guideline z */}
-								<Shape
-									color="#f00"
-									path={ [
-										{ z: -guidelineSize },
-											{ z:  guidelineSize },
-									] }
-								/>
-								{/* ground */}
-								<Rect 
-									color="#fff0"
-									backface="rgba(0,0,0,.35)"
-									fill
-									width={ guidelineSize }
-									height={ guidelineSize }
-									rotate={ { x: TAU / 4 } }
-								/>
-							</Anchor>
-					}
+					<CoordinateSpace show={ props.showCoordinateSpace } size={ props.width > props.height ? props.width : props.height } />
 
 					<Anchor>
 						<Shape
@@ -192,12 +159,12 @@ export default IconBicycle;
 IconBicycle.defaultProps = {
 	dragRotate: false,
 	zoom: 1,
-	strokeColor: "#373737",
-	stroke: 5,
+	strokeColor: defaultStrokeColor,
+	stroke: defaultStroke,
 	width: 256,
 	height: 256,
 	className: '',
-	showGuideline: false,
+	showCoordinateSpace: false,
 };
 
 IconBicycle.propTypes = {
@@ -208,5 +175,5 @@ IconBicycle.propTypes = {
 	width: PropTypes.number,
 	height: PropTypes.number,
 	className: PropTypes.string,
-	showGuideline: PropTypes.bool,
+	showCoordinateSpace: PropTypes.bool,
 };
