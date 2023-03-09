@@ -24,7 +24,7 @@ function App() {
 					<IconGame dragRotate zoom={ 1 } className="m-3" />
 				</Col>
 				<Col>
-					<IconCamp dragRotate zoom={ 2 } className="m-3" width={ 512 } height={ 512 } showCoordinateSpace />
+					<IconCamp dragRotate zoom={ 1 } className="m-3" />
 				</Col>
 			</Row>
 		</Container>

@@ -91,7 +91,7 @@ const IconCamp = (props) => {
 					</Anchor>
 
 					{/* tent */}
-					<Anchor translate={ { x: -32, z: -32 } }>
+					<Anchor translate={ { x: -56, z: -56 } }>
 
 						{/* window */}
 						<Shape 
