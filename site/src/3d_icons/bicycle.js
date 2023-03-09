@@ -67,7 +67,7 @@ const IconBicycle = (props) => {
 					/>
 
 					{/* transmission */}
-					<Anchor translate={ { x: -16, y: -48 } } rotate={ { z: -45 } }>
+					<Anchor translate={ { x: -16, y: -48 } } rotate={ { z: TAU / 8 } }>
 
 						{/* cog */}
 						<Ellipse

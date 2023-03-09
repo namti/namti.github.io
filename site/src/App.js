@@ -9,6 +9,7 @@ import {
 	IconBicycle,
 	IconGame,
 	IconCamp,
+	IconSuitcase,
 } from './3d_icons';
 
 import './view/dist/style.css';
@@ -18,13 +19,16 @@ function App() {
 		<Container className="my-5">
 			<Row>
 				<Col>
-					<IconBicycle dragRotate zoom={ 1 } className="m-3" />
+					<IconBicycle dragRotate zoom={ 1 } className="m-3 border" />
 				</Col>
 				<Col>
-					<IconGame dragRotate zoom={ 1 } className="m-3" />
+					<IconGame dragRotate zoom={ 1 } className="m-3 border" />
 				</Col>
 				<Col>
-					<IconCamp dragRotate zoom={ 1 } className="m-3" />
+					<IconCamp dragRotate zoom={ 1 } className="m-3 border" />
+				</Col>
+				<Col>
+					<IconSuitcase dragRotate zoom={ 1 } className="m-3 border" />
 				</Col>
 			</Row>
 		</Container>

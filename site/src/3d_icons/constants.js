@@ -1,2 +1,2 @@
 export const defaultStroke = 3;
-export const defaultStrokeColor = 'rgba(0,0,0,.5)';
+export const defaultStrokeColor = 'rgba(45,45,45,1)';

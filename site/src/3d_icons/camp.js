@@ -43,7 +43,7 @@ const IconCamp = (props) => {
 		<div style={ { width: props.width, height: props.height } } className={ props.className }>
 			<Illustration zoom={ props.zoom } dragRotate={ props.dragRotate }>
 				<Anchor 
-					translate={ { y: 32 } } 
+					translate={ { x: 16, y: 48 } } 
 					rotate={ { x: -0.23, y: 0.41 } } // rotate camera
 				>
 					<CoordinateSpace show={ props.showCoordinateSpace } size={ props.width > props.height ? props.width : props.height } />
