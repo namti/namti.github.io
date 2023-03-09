@@ -17,12 +17,14 @@ function App() {
 	return (
 		<Container className="my-5">
 			<Row>
-				<Col className="d-flex align-items-baseline">
-
-				<IconBicycle dragRotate zoom={ 1 } className="m-3" />
-				<IconGame dragRotate zoom={ 1 } className="m-3" />
-				<IconCamp dragRotate zoom={ 1 } className="m-3" _showCoordinateSpace />
-
+				<Col>
+					<IconBicycle dragRotate zoom={ 1 } className="m-3" />
+				</Col>
+				<Col>
+					<IconGame dragRotate zoom={ 1 } className="m-3" />
+				</Col>
+				<Col>
+					<IconCamp dragRotate zoom={ 2 } className="m-3" width={ 512 } height={ 512 } showCoordinateSpace />
 				</Col>
 			</Row>
 		</Container>
