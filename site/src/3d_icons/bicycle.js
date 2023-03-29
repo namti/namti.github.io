@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef, useImperativeHandle } from 'react';
 import PropTypes from 'prop-types';
 import { 
 	Anchor,
@@ -14,11 +14,15 @@ import {
 	defaultStrokeColor,
 } from './constants';
 
-const IconBicycle = (props) => {
+const IconBicycle = forwardRef((props, ref) => {
+
+	useImperativeHandle(ref, () => ({
+	}), []);
+
 	const TAU = Zdog.TAU;
 
 	return (
-		<div style={ { width: props.width, height: props.height } } className={ props.className }>
+		<div style={ { width: props.width, height: props.height } } className={ props.className } ref={ ref }>
 			<Illustration zoom={ props.zoom } dragRotate={ props.dragRotate }>
 				<Anchor translate={ { y: 80 } }>
 					<CoordinateSpace show={ props.showCoordinateSpace } size={ props.width > props.height ? props.width : props.height } />
@@ -152,9 +156,11 @@ const IconBicycle = (props) => {
 			</Illustration>
 		</div>
 	)
-}
+})
 
 export default IconBicycle;
+
+IconBicycle.displayName = "IconBicycle";
 
 IconBicycle.defaultProps = {
 	dragRotate: false,
