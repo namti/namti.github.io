@@ -13,6 +13,15 @@ html, body, #root{
 	height: 100%;
 }
 
+.logo-svg{
+	height: 2rem;
+
+	path{
+		outline: solid 2px #000;
+		fill: #fff;
+	}
+}
+
 @media (prefers-reduced-motion: no-preference) {
   // a:nth-of-type(2) .logo {
   //   animation: logo-spin infinite 20s linear;
